@@ -8,7 +8,14 @@ for suit in suits:
     for rank in ranks:
         cards.append([suit, rank])
 
-random.shuffle(cards)
-# pop a card from the cards list
-card = cards.pop()
+def shuffle():
+    random.shuffle(cards)
+
+def deal():
+    shuffle()
+    card = cards.pop()
+    return card
+
+
+card = deal()
 print(card)
